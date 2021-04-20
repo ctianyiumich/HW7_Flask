@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+    <h1>
+        Hello, {{name}}!
+    </h1>
+    <p>
+        Today's technology headlines are...
+    </p>
+    <ol>
+    {%for headline in headlines_list%}
+    <li> <a href={{headline['url']}}>{{headline['title']}}</a>
+    {%endfor%}
+    </ol>
+</body>
+</html>
