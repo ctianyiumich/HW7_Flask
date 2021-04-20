@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+<style>
+table, th, td {
+  border: 1px solid black;
+}
+</style>
   <meta charset="UTF-8">
   <title></title>
 </head>
@@ -12,9 +17,19 @@
         Today's technology headlines are...
     </p>
     <ol>
+    <table>
+    <tr>
+    <th>Title</th>
+    <th>Thumbnail</th>
+    </tr>
     {%for headline in headlines_list%}
-    <li> <a href={{headline['url']}}>{{headline['title']}}</a>
+    <tr>
+    <th> <a href={{headline['url']}}>{{headline['title']}}</a>
+    <th> <img width='200', src={{headline['multimedia'][0]['url']}} />
+    </tr>
     {%endfor%}
     </ol>
+    </tr>
+    </table>
 </body>
 </html>
