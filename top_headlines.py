@@ -10,7 +10,6 @@ for result in nytimes_dict['results'][:5]:
     hl_list.append(result)
 
 app = Flask(__name__)
-
 @app.route('/')
 def index():     
     return '<h1>Welcome!</h1>'
@@ -20,5 +19,4 @@ def name():
     return render_template('name.html', name = "Buffy", headlines_list = hl_list)
 
 if __name__ == '__main__':
-
     app.run(debug=True)
