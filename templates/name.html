@@ -2,7 +2,7 @@
 <html>
 <head>
 <style>
-table, th, td {
+  table, th, td {
   border: 1px solid black;
 }
 </style>
@@ -22,7 +22,7 @@ table, th, td {
     <th>Title</th>
     <th>Thumbnail</th>
     </tr>
-    {%for headline in headlines_list%}
+      {%for headline in headlines_list%}
     <tr>
     <th> <a href={{headline['url']}}>{{headline['title']}}</a>
     <th> <img width='200', src={{headline['multimedia'][0]['url']}} />
